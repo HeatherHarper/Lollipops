@@ -33,13 +33,18 @@ public class Lollipop {
      * Draw a red lollipop on a stick
      */
     private void drawLollipop() {
+        // declare variables for placement of lollipop
+        double left = X - (SIZE / 2.0);
+        double top = Y - (SIZE / 2.0);
+        double bottom = Y + STICK;
+        
         // Draw stick
         UI.setLineWidth(SIZE / 8.0);             
-        UI.drawLine(X, Y, X, Y + STICK); 
+        UI.drawLine(X, Y, X, bottom); 
         // Draw lollipop             
         UI.setLineWidth(1);              
         UI.setColor(Color.red);          
-        UI.fillOval(X - (SIZE / 2.0), Y - (SIZE / 2.0), SIZE, SIZE);         
+        UI.fillOval(left, top, SIZE, SIZE);         
     }
     
     
